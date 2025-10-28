@@ -1,0 +1,23 @@
+<ion-content class="ion-padding ion-text-center" fullscreen>
+  <div class="login-container">
+
+    <h1>Iniciar sesión / Registrar</h1>
+
+    <ion-item lines="none">
+      <ion-input placeholder="Correo" type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-input placeholder="Contraseña" type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="onLogin()" [disabled]="loading" class="login-button">
+      {{ loading ? 'Ingresando...' : 'Entrar' }}
+    </ion-button>
+
+    <ion-button expand="block" color="secondary" (click)="onRegister()" [disabled]="loading">
+      {{ loading ? 'Registrando...' : 'Registrar' }}
+    </ion-button>
+
+  </div>
+</ion-content>

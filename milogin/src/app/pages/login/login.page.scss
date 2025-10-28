@@ -1,0 +1,115 @@
+/* Reset básico */
+ion-content {
+  --background: #f5f6fa;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #222;
+  animation: fadeInUp 1s ease forwards 0.3s;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  color: #555;
+  animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-input {
+  margin-bottom: 20px;
+  --background: #fff;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  --highlight-height: 0px;
+  padding-left: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+
+  ion-input {
+    padding: 15px 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+}
+
+.login-button {
+  --border-radius: 12px;
+  --background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 14px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+
+  ion-spinner {
+    color: #fff;
+  }
+}
+
+.footer-text {
+  margin-top: 25px;
+  font-size: 0.85rem;
+  color: #888;
+
+  a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
